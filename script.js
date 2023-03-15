@@ -11,10 +11,10 @@ fetch("https://striveschool-api.herokuapp.com/books")
       col.className = "col";
       col.innerHTML = `
         <div class="card">
-        <img src="${book.img}" id="card-body" class="card-img-top img-fluid">
-        <div class="card-body">
-            <h5 class="card-title">${book.title}</h5>
-            <p class="card-text">${book.price} Euro</p>
+        <img style="height:300px" src="${book.img}" id="card-body" class="card-img-top img-fluid">
+        <div class="card-body
+            <h6 class="card-title text-center">${book.title}</h6>
+            <p class="card-text fst-italic text-center">Prezzo: ${book.price} Euro</p>
             <button class="btn btn-danger px-2 py-1 w-100 fw-semibold">Rimuovi</button>
         </div>
         </div>
