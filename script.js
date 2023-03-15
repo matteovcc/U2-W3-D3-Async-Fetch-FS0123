@@ -1,7 +1,7 @@
 fetch("https://striveschool-api.herokuapp.com/books")
   .then((booksObj) => booksObj.json())
   .then((books) => {
-    console.log(books);
+    //console.log(books);
 
     const grid = document.getElementById("books");
     grid.innerHTML = "";
@@ -24,23 +24,15 @@ fetch("https://striveschool-api.herokuapp.com/books")
         </div>
     `;
 
-    const removeBtn = col.querySelector(".btn")
-    removeBtn.onclick = () => {
-        col.remove()
-    }
-
-    
+      const removeBtn = col.querySelector(".btn");
+      removeBtn.onclick = () => {
+        col.remove();
+      };
 
       grid.appendChild(col);
-
-      
-      
-      
     });
-})
-.catch((error) => console.log("errore ", error));
-
-
+  })
+  .catch((error) => console.log("errore ", error));
 
 //   const cardBody = document.getElementById("card-body")
 
