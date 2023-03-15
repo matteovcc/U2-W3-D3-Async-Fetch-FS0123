@@ -10,12 +10,16 @@ fetch("https://striveschool-api.herokuapp.com/books")
       const col = document.createElement("div");
       col.className = "col";
       col.innerHTML = `
-        <div class="card">
-        <img style="height:300px" src="${book.img}" id="card-body" class="card-img-top img-fluid">
-        <div class="card-body
+        <div class="card";>
+        <img style="height:350px" src="${book.img}" class="card-img-top img-fluid">
+        <div class="card-body">
             <h6 class="card-title text-center">${book.title}</h6>
             <p class="card-text fst-italic text-center">Prezzo: ${book.price} Euro</p>
-            <button class="btn btn-danger px-2 py-1 w-100 fw-semibold">Rimuovi</button>
+            <div class="d-flex justify-content-center ">
+            <button class="btn btn-danger px-2 py-1 w-40 fw-semibold me-1">Rimuovi</button>
+            <button class="btn btn-primary px-2 py-1 w-40 fw-semibold ms-1">Aggiungi</button>
+            </div>
+
         </div>
         </div>
     `;
@@ -25,6 +29,8 @@ fetch("https://striveschool-api.herokuapp.com/books")
         col.remove()
     }
 
+    
+
       grid.appendChild(col);
 
       
@@ -33,6 +39,8 @@ fetch("https://striveschool-api.herokuapp.com/books")
     });
 })
 .catch((error) => console.log("errore", error));
+
+
 
 //   const cardBody = document.getElementById("card-body")
 
