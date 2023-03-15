@@ -10,7 +10,7 @@ fetch("https://striveschool-api.herokuapp.com/books")
       const col = document.createElement("div");
       col.className = "col";
       col.innerHTML = `
-        <div class="card";>
+        <div class="card mt-3";>
         <img style="height:350px" src="${book.img}" class="card-img-top img-fluid">
         <div class="card-body">
             <h6 class="card-title text-center">${book.title}</h6>
@@ -38,7 +38,7 @@ fetch("https://striveschool-api.herokuapp.com/books")
       
     });
 })
-.catch((error) => console.log("errore", error));
+.catch((error) => console.log("errore ", error));
 
 
 
