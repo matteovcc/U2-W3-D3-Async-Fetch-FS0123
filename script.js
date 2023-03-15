@@ -1,7 +1,7 @@
 fetch("https://striveschool-api.herokuapp.com/books")
   .then((booksObj) => booksObj.json())
   .then((books) => {
-    //console.log(books);
+    //console.log(books); <---Array di oggetti  
 
     const grid = document.getElementById("books");
     grid.innerHTML = "";
@@ -34,11 +34,3 @@ fetch("https://striveschool-api.herokuapp.com/books")
   })
   .catch((error) => console.log("errore ", error));
 
-//   const cardBody = document.getElementById("card-body")
-
-//   const button = document.createElement("button");
-//   button.className = "btn btn-danger";
-//   button.innerText = "Scarta";
-//   button.onclick = () => {
-//       col.remove();
-//   };
